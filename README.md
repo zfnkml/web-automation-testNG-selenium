@@ -80,7 +80,7 @@ This project automates key scenarios on the website [Daily Finance](https://dail
 2. Search for the updated email.
 3. Assert that the updated email appears in the admin dashboard.
 
-## Allure Reports
+## 📊 Allure Reports
 
 ![image](https://github.com/user-attachments/assets/3890fccb-e08a-4149-898c-6f6ef8050267)
 
