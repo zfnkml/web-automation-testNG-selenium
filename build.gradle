@@ -12,8 +12,27 @@ repositories {
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    testImplementation 'org.testng:testng:7.10.2'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.27.0'
+
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+
+    testImplementation 'io.rest-assured:rest-assured:5.5.0'
+    implementation 'commons-configuration:commons-configuration:1.10'
+
+    implementation 'org.apache.commons:commons-csv:1.12.0'
+
+    implementation 'io.qameta.allure:allure-testng:2.29.1'
 }
 
 test {
-    useJUnitPlatform()
+//    useJUnitPlatform()
+    useTestNG() {
+        if (project.hasProperty("aEmail") && project.hasProperty("aPassword")) {
+            systemProperties.put("aEmail", project.property("aEmail"))
+            systemProperties.put("aPassword", project.property("aPassword"))
+        }
+        suites "./src/test/resources/suite.xml"
+    }
 }
