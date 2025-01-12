@@ -68,7 +68,7 @@ This project automates key scenarios on the website [Daily Finance](https://dail
 
 ## 📋 Test Case Documentation
 
-You can find the detailed test cases [here](https://github.com/zfnkml/web-automation-testNG-selenium/blob/main/test-cases/test-case-documentation.md).
+You can find the detailed test cases [here](https://docs.google.com/spreadsheets/d/1Th49lhptVNlXDWJhZjxc_F62TAe7EHzb/edit?gid=1414849447#gid=1414849447).
 
 ## 🚀 Setup and Execution
 
