@@ -104,7 +104,7 @@ public class TestRunner extends Setup {
     }
 
     @Test(priority = 6, dataProviderClass = ItemsDataProviderCSV.class, dataProvider = "ItemsCSV")
-    public void testAddItem(String itemName, String quantity, String amount, String date, String month, String year, String remarks) throws InterruptedException {
+    public void testAddItem_fromCSV(String itemName, String quantity, String amount, String date, String month, String year, String remarks) throws InterruptedException {
 //        6. Add random 2 items (1 for all fields, another for only mandatory fields) and
 //        assert 2 items are showing on the item list
 
@@ -166,10 +166,8 @@ public class TestRunner extends Setup {
     public void testLogin_asAdmin_successful() throws IOException {
         LoginPage loginPage = new LoginPage(webDriver);
         loginPage.loginForm(
-//                System.getProperty("aEmail"),
-//                System.getProperty("aPassword")
-                "admin@test.com",
-                "admin123"
+                System.getProperty("aEmail"),
+                System.getProperty("aPassword")
         );
 
         Assert.assertTrue(loginPage.loginSuccessful());

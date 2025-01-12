@@ -22,6 +22,14 @@ public class Setup {
     private static String fileConfig = "./src/test/resources/config.properties";
 
     @BeforeTest
+    public void setUp() {
+        webDriver = new ChromeDriver();
+        webDriver.manage().window().maximize();
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        webDriver.get("https://dailyfinance.roadtocareer.net/");
+    }
+
+    @BeforeTest
     public static Properties configFile() throws IOException {
         properties = new Properties();
         properties.load(new FileInputStream(fileConfig));
@@ -34,22 +42,14 @@ public class Setup {
         propertiesConfiguration.save();
     }
 
-    @BeforeTest
-    public void setUp() {
-        webDriver = new ChromeDriver();
-        webDriver.manage().window().maximize();
-        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        webDriver.get("https://dailyfinance.roadtocareer.net/");
-    }
-
     @BeforeMethod
     public void wait1s() throws InterruptedException {
-        Thread.sleep(1000);
+        Thread.sleep(2000);
     }
 
     @AfterTest
     public void tearDown() throws InterruptedException {
-//        Thread.sleep(9000);
-//        webDriver.quit();
+        Thread.sleep(1000);
+        webDriver.quit();
     }
 }
