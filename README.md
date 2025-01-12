@@ -4,26 +4,6 @@
 
 This project automates key scenarios on the website [Daily Finance](https://dailyfinance.roadtocareer.net/) using TestNG for testing and follows the Page Object Model (POM) design pattern.
 
-## Table of Contents
-- [Features](#features)
-- [Tools and Technologies Used](#tools-and-technologies-used)
-- [Automation Scenarios](#automation-scenarios)
-  - [Scenario 1: User Registration](#scenario-1-user-registration)
-  - [Scenario 2: Password Reset](#scenario-2-password-reset)
-  - [Scenario 3: Adding Items](#scenario-3-adding-items)
-  - [Scenario 4: Profile Update](#scenario-4-profile-update)
-  - [Scenario 5: Admin Dashboard Validation](#scenario-5-admin-dashboard-validation)
-- [Test Case Documentation](#test-case-documentation)
-- [Negative Test Cases](#negative-test-cases)
-- [Allure Reports](#allure-reports)
-- [Setup and Execution](#setup-and-execution)
-  - [Prerequisites](#prerequisites)
-  - [Steps to Run the Tests](#steps-to-run-the-tests)
-- [Recording of Automation Process](#recording-of-automation-process)
-- [Folder Structure](#folder-structure)
-- [Future Improvements](#future-improvements)
-- [Contributors](#contributors)
-
 ---
 
 ## 🖥️ Features
